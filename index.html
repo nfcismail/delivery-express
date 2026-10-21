@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delivery Express — Livraison à Marrakech</title>
+  <meta name="description" content="Delivery Express livre les restaurants de Marrakech. Les frais partent de l’adresse de l’enseigne, dès 20 DH.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="header" data-header></header>
+  <main id="contenu">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Marrakech</p>
+          <h1>Les restaurants, livrés depuis leur adresse.</h1>
+          <p class="hero-lead">Choisissez une enseigne. Le livreur part de ce point, celui que vous pouvez chercher sur la carte. Les frais s’affichent avant l’envoi.</p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="#restaurants">Voir les restaurants</a>
+            <a class="btn btn-ghost" href="#calcul">Calculer les frais</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <p class="kicker">Barème</p>
+          <ul class="bareme">
+            <li><span>0 – 2,5 km</span><strong>20 DH</strong></li>
+            <li><span>≤ 4 km</span><strong>30 DH</strong></li>
+            <li><span>≤ 6 km</span><strong>35 DH</strong></li>
+            <li><span>≤ 8 km</span><strong>40 DH</strong></li>
+            <li><span>≤ 10 km</span><strong>50 DH</strong></li>
+            <li><span>Après 10 km</span><strong>+ 5 DH/km</strong></li>
+          </ul>
+          <p class="hero-note">Au-delà de 10 km : 50 DH, puis 5 DH par kilomètre. 12 km font 60 DH.</p>
+          <a class="btn btn-light btn-block" href="livraison.html">Voir le détail des frais</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="steps">
+          <article class="step">
+            <b>01</b>
+            <h3>Choisissez</h3>
+            <p>McDonald’s, KFC, pizzas, tacos, sushi, courses. Les prix affichés sont ceux des cartes en ligne.</p>
+          </article>
+          <article class="step">
+            <b>02</b>
+            <h3>Le départ</h3>
+            <p>La route commence à l’adresse du restaurant, un lieu cherchable sur la carte. Pas un dépôt unique.</p>
+          </article>
+          <article class="step">
+            <b>03</b>
+            <h3>Envoyez</h3>
+            <p>Le total, frais compris, part sur WhatsApp. Rien n’est débité sur ce site.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="restaurants" style="padding-top: 0">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Enseignes</p>
+            <h2>Vidéos, prix, et point de départ.</h2>
+          </div>
+          <p>Chaque fiche indique d’où part le livreur. Les vidéos et les prix reprennent les cartes publiées pour Marrakech.</p>
+        </div>
+        <div class="place-grid" data-places></div>
+      </div>
+    </section>
+
+    <section class="section" id="calcul" style="padding-top: 10px">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Distance</p>
+            <h2>Du restaurant jusqu’à votre adresse.</h2>
+          </div>
+          <p>Choisissez l’enseigne, puis partagez votre position ou cherchez un lieu. Le prix suit la route.</p>
+        </div>
+        <div id="map-root"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" data-footer></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/fees.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/places.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

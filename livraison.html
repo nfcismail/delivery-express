@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frais de livraison — Delivery Express</title>
+  <meta name="description" content="Calculez les frais Delivery Express depuis le restaurant choisi : 20 DH jusqu’à 2,5 km, puis selon la route.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="livraison">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="header" data-header></header>
+  <main id="contenu">
+    <div class="wrap page-hero">
+      <p class="kicker">Frais</p>
+      <h1>Le prix suit la route.</h1>
+      <p>Le départ est le restaurant choisi dans la liste. Partagez votre position, cherchez une adresse, ou cliquez sur la carte. Le montant utilise la distance routière.</p>
+    </div>
+    <section class="section">
+      <div class="wrap split">
+        <div class="prose">
+          <h2>Le barème</h2>
+          <p>Jusqu’à 2,5 km, le forfait est de 20 DH. Jusqu’à 4 km, 30 DH. Jusqu’à 6 km, 35 DH. Jusqu’à 8 km, 40 DH. Jusqu’à 10 km, 50 DH. Le plafond est inclus : 2,5 km restent à 20 DH, 10 km restent à 50 DH.</p>
+          <p>Après 10 km, on garde ces 50 DH et on ajoute 5 DH par kilomètre. Un trajet de 12 km coûte donc 50 + 2 × 5 = 60 DH.</p>
+          <p>Les cercles sur la carte sont des repères à vol d’oiseau. Ils ne sont pas le prix. Le prix suit la route que le livreur emprunte.</p>
+          <p><a href="index.html#restaurants">Choisir un restaurant</a></p>
+        </div>
+        <div data-examples></div>
+      </div>
+    </section>
+    <section class="section" style="padding-top: 0">
+      <div class="wrap">
+        <div id="map-root"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" data-footer></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/fees.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/places.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Delivery Express</title>
+  <meta name="description" content="Contactez Delivery Express sur WhatsApp pour une livraison à Marrakech.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <header class="header" data-header></header>
+  <main id="contenu">
+    <div class="wrap page-hero">
+      <p class="kicker">Contact</p>
+      <h1>Écrire, ou commander.</h1>
+      <p>Les commandes et les questions partent sur WhatsApp. Pour une autre course — fleurs, colis, courses — décrivez-la dans le message : elle se confirme à part, sans menu en ligne.</p>
+    </div>
+    <section class="section">
+      <div class="wrap contact-grid">
+        <div class="stack">
+          <div class="panel">
+            <p class="kicker">WhatsApp</p>
+            <h2 style="font-size: 32px; letter-spacing: -0.04em">+212 651-992715</h2>
+            <p>Du restaurant, aux horaires du service.</p>
+            <p style="margin-top: 12px"><a class="btn btn-accent" href="https://wa.me/212651992715" target="_blank" rel="noopener">Ouvrir WhatsApp</a></p>
+          </div>
+          <form id="contact-form" class="checkout panel">
+            <label>Nom<input name="name" autocomplete="name" required></label>
+            <label>Téléphone<input name="phone" inputmode="tel" autocomplete="tel"></label>
+            <label>Message<textarea name="message" required placeholder="Question, heure, ou autre course."></textarea></label>
+            <p class="form-error" data-error hidden></p>
+            <button class="btn btn-dark" type="submit">Envoyer le message</button>
+          </form>
+        </div>
+        <div class="stack">
+          <div id="pin-map" class="pin-map"></div>
+          <div class="panel">
+            <h2 style="font-size: 22px">Points de départ</h2>
+            <p>Les épingles sont les restaurants cherchables à Marrakech. La commande part de celui que vous choisissez.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" data-footer></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/fees.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/places.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
